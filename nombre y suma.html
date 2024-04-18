@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saludo y Suma</title>
+</head>
+<body>
+
+<h3>Angeles Fernandez Carlos Alberto</h3>
+
+<script>
+function saludar() {
+    var nombre = prompt("ingresa tu nombre:");
+    if (nombre != null) {
+        alert("Hola, " + nombre + ". Bienvenido!");
+        sumarNumeros();
+    }
+}
+
+function sumarNumeros() {
+    var numero1 = parseFloat(prompt("Ingresa el primer número:"));
+    var numero2 = parseFloat(prompt("Ingresa el segundo número:"));
+    var numero3 = parseFloat(prompt("Ingresa el tercer número:"));
+    if (!isNaN(numero1) && !isNaN(numero2) && !isNaN(numero3)) {
+        var suma = numero1 + numero2 + numero3;
+        alert("La suma de los números es: " + suma);
+    } else {
+        alert("Por favor, ingresa números válidos.");
+        sumarNumeros();
+    }
+}
+
+saludar();
+</script>
+
+</body>
+</html>
